@@ -1,8 +1,14 @@
-# Comen
+# Menthall
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies server:
+
+```bash
+npm install
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
