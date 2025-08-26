@@ -5,10 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card } from '@/components/ui/card'
 import { toast } from 'sonner'
-import Image from 'next/image'
 import {
-    Users,
-    MessageSquare,
     Sparkles,
     ChevronRight,
     Mail,
@@ -89,17 +86,6 @@ const Waitlist = () => {
         }
     }
 
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.3
-            }
-        }
-    }
-
     const itemVariants: Variants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
@@ -112,34 +98,6 @@ const Waitlist = () => {
         }
     }
 
-    const floatingVariants: Variants = {
-        animate: {
-            y: [0, -10, 0],
-            transition: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    }
-
-    const features = [
-        {
-            icon: Users,
-            title: "Expert Mentors",
-            description: "Connect with students from top colleges"
-        },
-        {
-            icon: MessageSquare,
-            title: "Personalized Advice",
-            description: "Get tailored guidance for your journey"
-        },
-        {
-            icon: Sparkles,
-            title: "Diverse Perspectives",
-            description: "Learn from mentors across all fields"
-        }
-    ]
     return (
         <div className="mx-auto mt-8 text-center space-y-8">
             <motion.div
@@ -206,7 +164,7 @@ const Waitlist = () => {
                                             </span>
                                         ) : (
                                             <span className="flex items-center gap-2">
-                                                Join Waitlist
+                                                Join as a Mentee
                                                 <ChevronRight className="w-4 h-4" />
                                             </span>
                                         )}
@@ -224,7 +182,7 @@ const Waitlist = () => {
                                     Welcome to the Community!
                                 </h3>
                                 <p className="text-sm text-gray-600 mt-1">
-                                    We've sent a confirmation email to you.
+                                    We&apos;ve sent a confirmation email to you.
                                 </p>
                             </motion.div>
                         )}
@@ -301,7 +259,7 @@ const Waitlist = () => {
                                     Welcome to the Mentor Network!
                                 </h3>
                                 <p className="text-sm text-gray-600 mt-1">
-                                    We've sent a confirmation email to you.
+                                    We&apos;ve sent a confirmation email to you.
                                 </p>
                             </motion.div>
                         )}
